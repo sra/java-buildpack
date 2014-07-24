@@ -28,7 +28,7 @@ components = JavaBuildpack::Buildpack.with_buildpack(build_dir, 'Detect failed w
 end.compact
 
 if components.empty?
-  abort
+  puts "Java"
 else
   str = components.join(' ')
   puts str.length > 255 ? str.slice(0..251) + '...' : str
